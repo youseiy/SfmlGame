@@ -8,13 +8,14 @@
 class Actor : public sf::Drawable, public sf::Transformable
 {
 public:
-    Actor(const char* name, sf::Texture texture);
-
+    Actor(const char* name, sf::Texture texture) :m_name(name), m_texture(texture), m_sprite(m_texture) 
+    {
+    };
     Actor() = delete;
 
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-
+    virtual void tick(const float deltaTime);
 
 
 protected:

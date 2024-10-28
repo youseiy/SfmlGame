@@ -25,7 +25,7 @@ add_executable(main src/main.cpp
 "src/Engine/InputComponent.h" 
 "src/Engine/InputComponent.cpp"
 "src/Engine/AbilityComponent.h"
-"src/Engine/AbilityComponent.cpp")
+"src/Engine/AbilityComponent.cpp" "src/Engine/EngineStatics.h" "src/Engine/EngineStatics.cpp")
 target_link_libraries(main PRIVATE sfml-graphics)
 target_compile_features(main PRIVATE cxx_std_17)
 
