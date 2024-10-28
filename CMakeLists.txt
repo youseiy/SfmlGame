@@ -13,7 +13,19 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp)
+add_executable(main src/main.cpp
+"src/Engine/Actor.h"
+"src/Engine/Actor.cpp"
+"src/Engine/ResourceManager.h"
+"src/Engine/ResourceManager.cpp"
+"src/Engine/Character.h" 
+"src/Engine/Character.cpp"
+"src/Engine/ActorComponent.h"
+"src/Engine/ActorComponent.cpp"
+"src/Engine/InputComponent.h" 
+"src/Engine/InputComponent.cpp"
+"src/Engine/AbilityComponent.h"
+"src/Engine/AbilityComponent.cpp")
 target_link_libraries(main PRIVATE sfml-graphics)
 target_compile_features(main PRIVATE cxx_std_17)
 
